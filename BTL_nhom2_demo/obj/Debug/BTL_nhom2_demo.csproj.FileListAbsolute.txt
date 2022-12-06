@@ -1,0 +1,13 @@
+C:\Users\HIENPHAM\Documents\BTL_nhom2_demo\BTL_nhom2_demo\bin\Debug\BTL_nhom2_demo.exe.config
+C:\Users\HIENPHAM\Documents\BTL_nhom2_demo\BTL_nhom2_demo\bin\Debug\BTL_nhom2_demo.exe
+C:\Users\HIENPHAM\Documents\BTL_nhom2_demo\BTL_nhom2_demo\bin\Debug\BTL_nhom2_demo.pdb
+C:\Users\HIENPHAM\Documents\BTL_nhom2_demo\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.csproj.AssemblyReference.cache
+C:\Users\HIENPHAM\Documents\BTL_nhom2_demo\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.csproj.SuggestedBindingRedirects.cache
+C:\Users\HIENPHAM\Documents\BTL_nhom2_demo\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.DangNhap.resources
+C:\Users\HIENPHAM\Documents\BTL_nhom2_demo\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.DanhSachNhanVien.resources
+C:\Users\HIENPHAM\Documents\BTL_nhom2_demo\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.Main.resources
+C:\Users\HIENPHAM\Documents\BTL_nhom2_demo\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.Properties.Resources.resources
+C:\Users\HIENPHAM\Documents\BTL_nhom2_demo\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.csproj.GenerateResource.cache
+C:\Users\HIENPHAM\Documents\BTL_nhom2_demo\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.csproj.CoreCompileInputs.cache
+C:\Users\HIENPHAM\Documents\BTL_nhom2_demo\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.exe
+C:\Users\HIENPHAM\Documents\BTL_nhom2_demo\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.pdb
