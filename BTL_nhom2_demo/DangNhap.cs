@@ -16,11 +16,5 @@ namespace BTL_nhom2_demo
         {
             InitializeComponent();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            DanhSachKhachHang danhSachKhachHang = new DanhSachKhachHang();
-            danhSachKhachHang.ShowDialog();
-        }
     }
 }
