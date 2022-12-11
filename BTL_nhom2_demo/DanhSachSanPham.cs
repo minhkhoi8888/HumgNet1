@@ -16,5 +16,10 @@ namespace BTL_nhom2_demo
         {
             InitializeComponent();
         }
+
+        private void DanhSachSanPham_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
