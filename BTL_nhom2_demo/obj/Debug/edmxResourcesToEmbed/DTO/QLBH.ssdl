@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="QLBH_01Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="QLBH_02Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
@@ -45,13 +45,6 @@
     <Property Name="giam_gia" Type="float" />
     <Property Name="thanh_tien" Type="float" />
   </EntityType>
-  <EntityType Name="tb_Donvitinh">
-    <Key>
-      <PropertyRef Name="ma_don_vi" />
-    </Key>
-    <Property Name="ma_don_vi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ten_don_vi" Type="nvarchar" MaxLength="50" />
-  </EntityType>
   <EntityType Name="tb_Hanghoa">
     <Key>
       <PropertyRef Name="ma_hang" />
@@ -59,12 +52,11 @@
     <Property Name="ma_hang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ten_hang" Type="nvarchar" MaxLength="50" />
     <Property Name="ma_loai" Type="int" />
-    <Property Name="ma_don_vi" Type="int" />
+    <Property Name="ma_nuoc" Type="int" />
     <Property Name="so_luong" Type="float" />
     <Property Name="don_gia_nhap" Type="float" />
     <Property Name="don_gia_ban" Type="float" />
-    <Property Name="thoi_gian_bh" Type="datetime" />
-    <Property Name="trang_thai" Type="nvarchar" MaxLength="50" />
+    <Property Name="thoi_gian_bh" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="tb_HDB">
     <Key>
@@ -125,11 +117,18 @@
     <Property Name="ma_cv" Type="int" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6013: The table/view 'QLBH_01.dbo.tb_User' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+warning 6013: The table/view 'QLBH_02.dbo.tb_User' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="tb_User">
           <Property Name="Username" Type="nvarchar" MaxLength="50" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
         </EntityType>-->
+  <EntityType Name="tb_Xuatxu">
+    <Key>
+      <PropertyRef Name="ma_nuoc" />
+    </Key>
+    <Property Name="ma_nuoc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_nuoc" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <Association Name="FK_tb_CTHDB_tb_Hanghoa">
     <End Role="tb_Hanghoa" Type="Self.tb_Hanghoa" Multiplicity="1" />
     <End Role="tb_CTHDB" Type="Self.tb_CTHDB" Multiplicity="*" />
@@ -178,18 +177,6 @@ warning 6013: The table/view 'QLBH_01.dbo.tb_User' does not have a primary key d
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tb_Hanghoa_tb_Donvitinh">
-    <End Role="tb_Donvitinh" Type="Self.tb_Donvitinh" Multiplicity="0..1" />
-    <End Role="tb_Hanghoa" Type="Self.tb_Hanghoa" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_Donvitinh">
-        <PropertyRef Name="ma_don_vi" />
-      </Principal>
-      <Dependent Role="tb_Hanghoa">
-        <PropertyRef Name="ma_don_vi" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_tb_Hanghoa_tb_Loaihang">
     <End Role="tb_Loaihang" Type="Self.tb_Loaihang" Multiplicity="0..1" />
     <End Role="tb_Hanghoa" Type="Self.tb_Hanghoa" Multiplicity="*" />
@@ -199,6 +186,18 @@ warning 6013: The table/view 'QLBH_01.dbo.tb_User' does not have a primary key d
       </Principal>
       <Dependent Role="tb_Hanghoa">
         <PropertyRef Name="ma_loai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Hanghoa_tb_Xuatxu">
+    <End Role="tb_Xuatxu" Type="Self.tb_Xuatxu" Multiplicity="0..1" />
+    <End Role="tb_Hanghoa" Type="Self.tb_Hanghoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Xuatxu">
+        <PropertyRef Name="ma_nuoc" />
+      </Principal>
+      <Dependent Role="tb_Hanghoa">
+        <PropertyRef Name="ma_nuoc" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -274,13 +273,12 @@ warning 6013: The table/view 'QLBH_01.dbo.tb_User' does not have a primary key d
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="QLBH_01ModelStoreContainer">
+  <EntityContainer Name="QLBH_02ModelStoreContainer">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_Calam" EntityType="Self.tb_Calam" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_Congviec" EntityType="Self.tb_Congviec" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_CTHDB" EntityType="Self.tb_CTHDB" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_CTHDN" EntityType="Self.tb_CTHDN" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tb_Donvitinh" EntityType="Self.tb_Donvitinh" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_Hanghoa" EntityType="Self.tb_Hanghoa" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_HDB" EntityType="Self.tb_HDB" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_HDN" EntityType="Self.tb_HDN" Schema="dbo" store:Type="Tables" />
@@ -288,6 +286,7 @@ warning 6013: The table/view 'QLBH_01.dbo.tb_User' does not have a primary key d
     <EntitySet Name="tb_Loaihang" EntityType="Self.tb_Loaihang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_NCC" EntityType="Self.tb_NCC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tb_Nhanvien" EntityType="Self.tb_Nhanvien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Xuatxu" EntityType="Self.tb_Xuatxu" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_tb_CTHDB_tb_Hanghoa" Association="Self.FK_tb_CTHDB_tb_Hanghoa">
       <End Role="tb_Hanghoa" EntitySet="tb_Hanghoa" />
       <End Role="tb_CTHDB" EntitySet="tb_CTHDB" />
@@ -304,12 +303,12 @@ warning 6013: The table/view 'QLBH_01.dbo.tb_User' does not have a primary key d
       <End Role="tb_HDN" EntitySet="tb_HDN" />
       <End Role="tb_CTHDN" EntitySet="tb_CTHDN" />
     </AssociationSet>
-    <AssociationSet Name="FK_tb_Hanghoa_tb_Donvitinh" Association="Self.FK_tb_Hanghoa_tb_Donvitinh">
-      <End Role="tb_Donvitinh" EntitySet="tb_Donvitinh" />
-      <End Role="tb_Hanghoa" EntitySet="tb_Hanghoa" />
-    </AssociationSet>
     <AssociationSet Name="FK_tb_Hanghoa_tb_Loaihang" Association="Self.FK_tb_Hanghoa_tb_Loaihang">
       <End Role="tb_Loaihang" EntitySet="tb_Loaihang" />
+      <End Role="tb_Hanghoa" EntitySet="tb_Hanghoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Hanghoa_tb_Xuatxu" Association="Self.FK_tb_Hanghoa_tb_Xuatxu">
+      <End Role="tb_Xuatxu" EntitySet="tb_Xuatxu" />
       <End Role="tb_Hanghoa" EntitySet="tb_Hanghoa" />
     </AssociationSet>
     <AssociationSet Name="FK_tb_HDB_tb_Khachhang" Association="Self.FK_tb_HDB_tb_Khachhang">

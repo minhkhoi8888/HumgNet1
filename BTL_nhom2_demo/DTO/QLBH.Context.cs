@@ -13,10 +13,10 @@ namespace BTL_nhom2_demo.DTO
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QLBH_01Entities : DbContext
+    public partial class QLBH_02Entities : DbContext
     {
-        public QLBH_01Entities()
-            : base("name=QLBH_01Entities")
+        public QLBH_02Entities()
+            : base("name=QLBH_02Entities")
         {
         }
     
@@ -30,7 +30,6 @@ namespace BTL_nhom2_demo.DTO
         public virtual DbSet<tb_Congviec> tb_Congviec { get; set; }
         public virtual DbSet<tb_CTHDB> tb_CTHDB { get; set; }
         public virtual DbSet<tb_CTHDN> tb_CTHDN { get; set; }
-        public virtual DbSet<tb_Donvitinh> tb_Donvitinh { get; set; }
         public virtual DbSet<tb_Hanghoa> tb_Hanghoa { get; set; }
         public virtual DbSet<tb_HDB> tb_HDB { get; set; }
         public virtual DbSet<tb_HDN> tb_HDN { get; set; }
@@ -38,5 +37,6 @@ namespace BTL_nhom2_demo.DTO
         public virtual DbSet<tb_Loaihang> tb_Loaihang { get; set; }
         public virtual DbSet<tb_NCC> tb_NCC { get; set; }
         public virtual DbSet<tb_Nhanvien> tb_Nhanvien { get; set; }
+        public virtual DbSet<tb_Xuatxu> tb_Xuatxu { get; set; }
     }
 }
