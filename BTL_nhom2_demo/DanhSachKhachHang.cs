@@ -66,7 +66,7 @@ namespace BTL_nhom2_demo
         public void Sua()
         {
             int maKH = Convert.ToInt32(dataGridView1.SelectedCells[0].OwningRow.Cells["ma_kh"].Value.ToString());
-            tb_Khachhang curKhachHang = db.tb_Khachhang.Where(khacHang => khacHang.ma_kh == maKH).SingleOrDefault();
+            tb_Khachhang curKhachHang = db.tb_Khachhang.Where(khachHang => khachHang.ma_kh == maKH).SingleOrDefault();
             if (String.IsNullOrEmpty(txbTen.Text) || String.IsNullOrEmpty(txbDiaChi.Text) || String.IsNullOrEmpty(txbDienThoai.Text))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Notification", MessageBoxButtons.OK);

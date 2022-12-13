@@ -21,6 +21,9 @@ namespace BTL_nhom2_demo
         {
             DanhSachKhachHang danhSachKhachHang = new DanhSachKhachHang();
             danhSachKhachHang.ShowDialog();
+
+            DanhSachSanPham danhSachSanPham = new DanhSachSanPham();
+            danhSachSanPham.ShowDialog();
         }
     }
 }

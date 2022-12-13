@@ -69,8 +69,59 @@ namespace BTL_nhom2_demo
             cbXuatXu.ValueMember = "ma_nuoc";
         }
 
+        public void ClearForm()
+        {
+            txbTen.Clear();
+            LoadLoaiHang();
+            txbSoLuong.Clear();
+            txbGiaNhap.Clear();
+            txbGiaBan.Clear();
+            LoadXuatXu();
+            txbBaoHanh.Clear();
+        }
+
+        public void CheckEmptyInfo()
+        {
+            if (String.IsNullOrEmpty(txbTen.Text))
+            {
+                MessageBox.Show("Vui lòng điền tên sản phẩm", "Notification", MessageBoxButtons.OK);
+                txbTen.Focus();
+            }
+
+            if (String.IsNullOrEmpty(txbSoLuong.Text) || float.Parse(txbSoLuong.Text) < 0)
+            {
+                MessageBox.Show("Vui lòng điền số lượng sản phẩm lớn hơn 0", "Notification", MessageBoxButtons.OK);
+                txbTen.Focus();
+            }
+
+            if (String.IsNullOrEmpty(txbBaoHanh.Text))
+            {
+                MessageBox.Show("Vui lòng điền thời gian bảo hành", "Notification", MessageBoxButtons.OK);
+                txbBaoHanh.Focus();
+            }
+
+            if (String.IsNullOrEmpty(txbGiaNhap.Text))
+            {
+                MessageBox.Show("Vui lòng điền Giá nhập", "Notification", MessageBoxButtons.OK);
+                txbGiaNhap.Focus();
+            }
+
+            if (String.IsNullOrEmpty(txbGiaBan.Text))
+            {
+                MessageBox.Show("Vui lòng điền Giá bán", "Notification", MessageBoxButtons.OK);
+                txbGiaBan.Focus();
+            }
+            
+            if (float.Parse(txbGiaBan.Text) < float.Parse(txbGiaNhap.Text))
+            {
+                MessageBox.Show("Vui lòng điền Giá bán lớn hơn Giá nhập", "Notification", MessageBoxButtons.OK);
+                txbGiaBan.Focus();
+            }
+        }
+
         public void Them()
         {
+            CheckEmptyInfo();
             tb_Hanghoa hangHoa = new tb_Hanghoa()
             {
                 ten_hang = txbTen.Text,
@@ -85,8 +136,65 @@ namespace BTL_nhom2_demo
             db.tb_Hanghoa.Add(hangHoa);
             db.SaveChanges();
             LoadData();
+            ClearForm();
         }
 
+        public void Sua()
+        {
+            
+            int masp = Convert.ToInt32(dataGridView1.SelectedCells[0].OwningRow.Cells["ma_hang"].Value.ToString());
+            tb_Hanghoa curSanPham = db.tb_Hanghoa.Where(sp => sp.ma_hang == masp).SingleOrDefault();
+            CheckEmptyInfo();
 
+            curSanPham.ten_hang = txbTen.Text;
+            curSanPham.ma_loai = Convert.ToInt32(cbLoaiHang.SelectedValue.ToString());
+            curSanPham.ma_nuoc = Convert.ToInt32(cbXuatXu.SelectedValue.ToString());
+            curSanPham.so_luong = float.Parse(txbSoLuong.Text);
+            curSanPham.don_gia_nhap = float.Parse(txbGiaNhap.Text);
+            curSanPham.don_gia_ban = float.Parse(txbGiaBan.Text);
+            curSanPham.thoi_gian_bh = txbBaoHanh.Text;
+            db.SaveChanges();
+            LoadData();
+            ClearForm();
+        }
+
+        public void Xoa()
+        {
+            int masp = Convert.ToInt32(dataGridView1.SelectedCells[0].OwningRow.Cells["ma_hang"].Value.ToString());
+            tb_Hanghoa curSanPham = db.tb_Hanghoa.Where(sp => sp.ma_hang == masp).SingleOrDefault();
+
+            DialogResult res = MessageBox.Show("Bạn có muốn xóa sản phẩm khỏi danh sách?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                db.tb_Hanghoa.Remove(curSanPham);
+                db.SaveChanges();
+                MessageBox.Show("Xóa thành công", "Notification", MessageBoxButtons.OK);
+                LoadData();
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Them();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Sua();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Xoa();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Bạn có muốn thoát khỏi chương trình?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
     }
 }
