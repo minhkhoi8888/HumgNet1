@@ -69,7 +69,7 @@ namespace BTL_nhom2_demo
             tb_Khachhang curKhachHang = db.tb_Khachhang.Where(khachHang => khachHang.ma_kh == maKH).SingleOrDefault();
             if (String.IsNullOrEmpty(txbTen.Text) || String.IsNullOrEmpty(txbDiaChi.Text) || String.IsNullOrEmpty(txbDienThoai.Text))
             {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             } 
             else
             {

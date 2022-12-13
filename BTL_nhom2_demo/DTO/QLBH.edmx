@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QLBH_02Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QLBH_02Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -69,7 +69,7 @@
           </Key>
           <Property Name="ma_hdb" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ma_nv" Type="int" />
-          <Property Name="ngay_ban" Type="datetime" />
+          <Property Name="ngay_ban" Type="date" />
           <Property Name="ma_kh" Type="int" />
           <Property Name="thanh_tien" Type="float" />
         </EntityType>
@@ -115,7 +115,7 @@
           <Property Name="ma_nv" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ten_nv" Type="nvarchar" MaxLength="50" />
           <Property Name="gioi_tinh" Type="nvarchar" MaxLength="50" />
-          <Property Name="ngay_sinh" Type="datetime" />
+          <Property Name="ngay_sinh" Type="date" />
           <Property Name="dien_thoai" Type="nvarchar" MaxLength="50" />
           <Property Name="dia_chi" Type="nvarchar" MaxLength="50" />
           <Property Name="ma_ca" Type="int" />
@@ -341,8 +341,7 @@ warning 6013: The table/view 'QLBH_02.dbo.tb_User' does not have a primary key d
             <End Role="tb_Nhanvien" EntitySet="tb_Nhanvien" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLBH_02Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -420,7 +419,7 @@ warning 6013: The table/view 'QLBH_02.dbo.tb_User' does not have a primary key d
           </Key>
           <Property Name="ma_hdb" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ma_nv" Type="Int32" />
-          <Property Name="ngay_ban" Type="DateTime" Precision="3" />
+          <Property Name="ngay_ban" Type="DateTime" Precision="0" />
           <Property Name="ma_kh" Type="Int32" />
           <Property Name="thanh_tien" Type="Double" />
           <NavigationProperty Name="tb_CTHDB" Relationship="Self.FK_tb_CTHDB_tb_HDB" FromRole="tb_HDB" ToRole="tb_CTHDB" />
@@ -475,7 +474,7 @@ warning 6013: The table/view 'QLBH_02.dbo.tb_User' does not have a primary key d
           <Property Name="ma_nv" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ten_nv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="gioi_tinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ngay_sinh" Type="DateTime" Precision="3" />
+          <Property Name="ngay_sinh" Type="DateTime" Precision="0" />
           <Property Name="dien_thoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="dia_chi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ma_ca" Type="Int32" />

@@ -81,31 +81,31 @@ namespace BTL_nhom2_demo
         {
             if (String.IsNullOrEmpty(txbTen.Text))
             {
-                MessageBox.Show("Vui lòng điền tên nhân viên.", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng điền tên nhân viên.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 txbTen.Focus();
             }
 
             if (String.IsNullOrEmpty(txbGioiTinh.Text))
             {
-                MessageBox.Show("Vui lòng điền giới tính nhân viên.", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng điền giới tính nhân viên.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 txbGioiTinh.Focus();
             }
 
             if (String.IsNullOrEmpty(txbDienThoai.Text))
             {
-                MessageBox.Show("Vui lòng điền SĐT nhân viên.", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng điền SĐT nhân viên.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 txbDienThoai.Focus();
             }
 
             if (String.IsNullOrEmpty(txbDiaChi.Text))
             {
-                MessageBox.Show("Vui lòng điền Địa chỉ.", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng điền Địa chỉ.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 txbDiaChi.Focus();
             }
 
             if (dateTimePicker1.Value == null)
             {
-                MessageBox.Show("Vui lòng điền DOB.", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng điền DOB.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 dateTimePicker1.Focus();
             }
 

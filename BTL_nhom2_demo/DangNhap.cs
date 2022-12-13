@@ -19,14 +19,17 @@ namespace BTL_nhom2_demo
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DanhSachKhachHang danhSachKhachHang = new DanhSachKhachHang();
-            danhSachKhachHang.ShowDialog();
+            //DanhSachKhachHang danhSachKhachHang = new DanhSachKhachHang();
+            //danhSachKhachHang.ShowDialog();
 
-            DanhSachSanPham danhSachSanPham = new DanhSachSanPham();
-            danhSachSanPham.ShowDialog();
+            //DanhSachSanPham danhSachSanPham = new DanhSachSanPham();
+            //danhSachSanPham.ShowDialog();
 
-            DanhSachNhanVien danhSachNhanVien = new DanhSachNhanVien();
-            danhSachNhanVien.ShowDialog();
+            //DanhSachNhanVien danhSachNhanVien = new DanhSachNhanVien();
+            //danhSachNhanVien.ShowDialog();
+
+            HoaDonBan hoaDonBan = new HoaDonBan();
+            hoaDonBan.ShowDialog();
         }
     }
 }

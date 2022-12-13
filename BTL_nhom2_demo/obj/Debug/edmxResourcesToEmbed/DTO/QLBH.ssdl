@@ -64,7 +64,7 @@
     </Key>
     <Property Name="ma_hdb" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ma_nv" Type="int" />
-    <Property Name="ngay_ban" Type="datetime" />
+    <Property Name="ngay_ban" Type="date" />
     <Property Name="ma_kh" Type="int" />
     <Property Name="thanh_tien" Type="float" />
   </EntityType>
@@ -110,7 +110,7 @@
     <Property Name="ma_nv" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ten_nv" Type="nvarchar" MaxLength="50" />
     <Property Name="gioi_tinh" Type="nvarchar" MaxLength="50" />
-    <Property Name="ngay_sinh" Type="datetime" />
+    <Property Name="ngay_sinh" Type="date" />
     <Property Name="dien_thoai" Type="nvarchar" MaxLength="50" />
     <Property Name="dia_chi" Type="nvarchar" MaxLength="50" />
     <Property Name="ma_ca" Type="int" />
