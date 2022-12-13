@@ -196,5 +196,19 @@ namespace BTL_nhom2_demo
                 Close();
             }
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+            txbTen.Text = row.Cells[1].Value.ToString();
+            cbLoaiHang.Text = row.Cells[2].Value.ToString();
+            cbXuatXu.Text = row.Cells[3].Value.ToString();
+            txbSoLuong.Text = row.Cells[4].Value.ToString();
+            txbGiaNhap.Text = row.Cells[5].Value.ToString();
+            txbGiaBan.Text = row.Cells[6].Value.ToString();
+            txbBaoHanh.Text = row.Cells[7].Value.ToString();
+        }
+
+        //c.ten_hang, c.tb_Loaihang.ten_loai, c.tb_Xuatxu.ten_nuoc, c.so_luong, c.don_gia_nhap, c.don_gia_ban, c.thoi_gian_bh
     }
 }
