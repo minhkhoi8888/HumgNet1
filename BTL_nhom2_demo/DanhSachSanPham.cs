@@ -84,37 +84,37 @@ namespace BTL_nhom2_demo
         {
             if (String.IsNullOrEmpty(txbTen.Text))
             {
-                MessageBox.Show("Vui lòng điền tên sản phẩm", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng điền tên sản phẩm", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 txbTen.Focus();
             }
 
             if (String.IsNullOrEmpty(txbSoLuong.Text) || float.Parse(txbSoLuong.Text) < 0)
             {
-                MessageBox.Show("Vui lòng điền số lượng sản phẩm lớn hơn 0", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng điền số lượng sản phẩm lớn hơn 0", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 txbTen.Focus();
             }
 
             if (String.IsNullOrEmpty(txbBaoHanh.Text))
             {
-                MessageBox.Show("Vui lòng điền thời gian bảo hành", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng điền thời gian bảo hành", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 txbBaoHanh.Focus();
             }
 
             if (String.IsNullOrEmpty(txbGiaNhap.Text))
             {
-                MessageBox.Show("Vui lòng điền Giá nhập", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng điền Giá nhập", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 txbGiaNhap.Focus();
             }
 
             if (String.IsNullOrEmpty(txbGiaBan.Text))
             {
-                MessageBox.Show("Vui lòng điền Giá bán", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng điền Giá bán", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 txbGiaBan.Focus();
             }
             
             if (float.Parse(txbGiaBan.Text) < float.Parse(txbGiaNhap.Text))
             {
-                MessageBox.Show("Vui lòng điền Giá bán lớn hơn Giá nhập", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng điền Giá bán lớn hơn Giá nhập", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 txbGiaBan.Focus();
             }
         }
