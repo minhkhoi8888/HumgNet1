@@ -53,3 +53,5 @@ D:\DOWNLOAD\BTL_nhom2_demo\BTL_nhom2_demo\bin\Debug\EntityFramework.SqlServer.dl
 D:\DOWNLOAD\BTL_nhom2_demo\BTL_nhom2_demo\bin\Debug\EntityFramework.xml
 D:\DOWNLOAD\BTL_nhom2_demo\BTL_nhom2_demo\bin\Debug\EntityFramework.SqlServer.xml
 D:\DOWNLOAD\BTL_nhom2_demo\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.csproj.CopyComplete
+D:\DOWNLOAD\BTL_nhom2_demo\BTL_nhom2_demo\obj\Debug\BTL_Final.BCHangTon.resources
+D:\DOWNLOAD\BTL_nhom2_demo\BTL_nhom2_demo\obj\Debug\BTL_Final.Form1.resources

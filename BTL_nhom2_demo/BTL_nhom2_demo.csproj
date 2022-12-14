@@ -85,6 +85,21 @@
     <Compile Include="DanhSachSanPham.Designer.cs">
       <DependentUpon>DanhSachSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO1\QLBH.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBH.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO1\QLBH.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO1\QLBH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBH.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +153,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="DTO1\QLBH.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLBH.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DTO1\QLBH.edmx.diagram">
+      <DependentUpon>QLBH.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -154,6 +176,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DTO1\QLBH.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLBH.edmx</DependentUpon>
+      <LastGenOutput>QLBH.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DTO1\QLBH.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLBH.edmx</DependentUpon>
+      <LastGenOutput>QLBH.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
