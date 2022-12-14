@@ -13,7 +13,7 @@
         <EntityTypeShape EntityType="QLBH_01Model.tb_Donvitinh" Width="1.5" PointX="6" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBH_01Model.tb_Hanghoa" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBH_01Model.tb_HDB" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBH_01Model.tb_HDN" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_01Model.tb_HDN" Width="1.5" PointX="8.25" PointY="8.375" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBH_01Model.tb_Khachhang" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBH_01Model.tb_Loaihang" Width="1.5" PointX="6" PointY="9.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBH_01Model.tb_NCC" Width="1.5" PointX="6" PointY="12.5" IsExpanded="true" />
