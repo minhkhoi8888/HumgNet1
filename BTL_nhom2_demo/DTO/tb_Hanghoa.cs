@@ -18,24 +18,22 @@ namespace BTL_nhom2_demo.DTO
         public tb_Hanghoa()
         {
             this.tb_CTHDB = new HashSet<tb_CTHDB>();
-            this.tb_CTHDN = new HashSet<tb_CTHDN>();
         }
     
         public int ma_hang { get; set; }
         public string ten_hang { get; set; }
         public Nullable<int> ma_loai { get; set; }
-        public Nullable<int> ma_don_vi { get; set; }
+        public Nullable<int> ma_nuoc { get; set; }
         public Nullable<double> so_luong { get; set; }
         public Nullable<double> don_gia_nhap { get; set; }
         public Nullable<double> don_gia_ban { get; set; }
-        public Nullable<System.DateTime> thoi_gian_bh { get; set; }
-        public string trang_thai { get; set; }
+        public string thoi_gian_bh { get; set; }
+        public Nullable<int> ma_chat_lieu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_CTHDB> tb_CTHDB { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_CTHDN> tb_CTHDN { get; set; }
-        public virtual tb_Donvitinh tb_Donvitinh { get; set; }
+        public virtual tb_Chatlieu tb_Chatlieu { get; set; }
         public virtual tb_Loaihang tb_Loaihang { get; set; }
+        public virtual tb_Xuatxu tb_Xuatxu { get; set; }
     }
 }

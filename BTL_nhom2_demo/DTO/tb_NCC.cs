@@ -14,18 +14,9 @@ namespace BTL_nhom2_demo.DTO
     
     public partial class tb_NCC
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tb_NCC()
-        {
-            this.tb_HDN = new HashSet<tb_HDN>();
-        }
-    
         public int ma_ncc { get; set; }
         public string ten_ncc { get; set; }
         public string dia_chi { get; set; }
         public string dien_thoai { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_HDN> tb_HDN { get; set; }
     }
 }

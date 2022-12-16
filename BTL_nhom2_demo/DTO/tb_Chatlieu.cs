@@ -12,16 +12,16 @@ namespace BTL_nhom2_demo.DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_Donvitinh
+    public partial class tb_Chatlieu
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tb_Donvitinh()
+        public tb_Chatlieu()
         {
             this.tb_Hanghoa = new HashSet<tb_Hanghoa>();
         }
     
-        public int ma_don_vi { get; set; }
-        public string ten_don_vi { get; set; }
+        public int ma_chat_lieu { get; set; }
+        public string ten_chat_lieu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_Hanghoa> tb_Hanghoa { get; set; }

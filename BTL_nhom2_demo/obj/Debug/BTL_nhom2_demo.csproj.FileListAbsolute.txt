@@ -53,3 +53,7 @@ C:\Users\HP\Source\Repos\HumgNet1\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.csproj
 C:\Users\HP\Source\Repos\HumgNet1\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.csproj.CopyComplete
 C:\Users\HP\Source\Repos\HumgNet1\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.exe
 C:\Users\HP\Source\Repos\HumgNet1\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.pdb
+C:\Users\HP\source\repos\HumgNet1\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.frm_congViec.resources
+C:\Users\HP\source\repos\HumgNet1\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.frm_hoaDonNhap.resources
+C:\Users\HP\source\repos\HumgNet1\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.caLam.resources
+C:\Users\HP\source\repos\HumgNet1\BTL_nhom2_demo\obj\Debug\BTL_nhom2_demo.frm_chatLieu.resources

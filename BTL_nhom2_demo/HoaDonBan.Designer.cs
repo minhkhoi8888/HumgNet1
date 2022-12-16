@@ -357,6 +357,7 @@
             this.Controls.Add(this.label1);
             this.Name = "HoaDonBan";
             this.Text = "HoaDonBan";
+            this.Load += new System.EventHandler(this.HoaDonBan_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

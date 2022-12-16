@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace BTL_nhom2_demo
 {
-    public partial class HoaDonBan : Form
+    public partial class frm_congViec : Form
     {
-        public HoaDonBan()
+        public frm_congViec()
         {
             InitializeComponent();
-        }
-
-        private void HoaDonBan_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

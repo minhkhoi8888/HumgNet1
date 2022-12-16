@@ -14,13 +14,20 @@ namespace BTL_nhom2_demo.DTO
     
     public partial class tb_HDB
     {
-        public int ma_hdb { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tb_HDB()
+        {
+            this.tb_CTHDB = new HashSet<tb_CTHDB>();
+        }
+    
+        public string ma_hdb { get; set; }
         public Nullable<int> ma_nv { get; set; }
         public Nullable<System.DateTime> ngay_ban { get; set; }
         public Nullable<int> ma_kh { get; set; }
         public Nullable<double> thanh_tien { get; set; }
     
-        public virtual tb_CTHDB tb_CTHDB { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_CTHDB> tb_CTHDB { get; set; }
         public virtual tb_Khachhang tb_Khachhang { get; set; }
         public virtual tb_Nhanvien tb_Nhanvien { get; set; }
     }

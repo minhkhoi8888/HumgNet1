@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLBH_FinalModelStoreContainer" CdmEntityContainer="QLBH_FinalEntities">
+    <EntitySetMapping Name="tb_Calam">
+      <EntityTypeMapping TypeName="QLBH_FinalModel.tb_Calam">
+        <MappingFragment StoreEntitySet="tb_Calam">
+          <ScalarProperty Name="ma_ca" ColumnName="ma_ca" />
+          <ScalarProperty Name="ten_ca" ColumnName="ten_ca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Congviec">
+      <EntityTypeMapping TypeName="QLBH_FinalModel.tb_Congviec">
+        <MappingFragment StoreEntitySet="tb_Congviec">
+          <ScalarProperty Name="ma_cv" ColumnName="ma_cv" />
+          <ScalarProperty Name="ten_cv" ColumnName="ten_cv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_CTHDB">
+      <EntityTypeMapping TypeName="QLBH_FinalModel.tb_CTHDB">
+        <MappingFragment StoreEntitySet="tb_CTHDB">
+          <ScalarProperty Name="ma_hdb" ColumnName="ma_hdb" />
+          <ScalarProperty Name="ma_hang" ColumnName="ma_hang" />
+          <ScalarProperty Name="so_luong" ColumnName="so_luong" />
+          <ScalarProperty Name="don_gia" ColumnName="don_gia" />
+          <ScalarProperty Name="giam_gia" ColumnName="giam_gia" />
+          <ScalarProperty Name="thanh_tien" ColumnName="thanh_tien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Chatlieu">
+      <EntityTypeMapping TypeName="QLBH_FinalModel.tb_Chatlieu">
+        <MappingFragment StoreEntitySet="tb_Chatlieu">
+          <ScalarProperty Name="ma_chat_lieu" ColumnName="ma_chat_lieu" />
+          <ScalarProperty Name="ten_chat_lieu" ColumnName="ten_chat_lieu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Hanghoa">
+      <EntityTypeMapping TypeName="QLBH_FinalModel.tb_Hanghoa">
+        <MappingFragment StoreEntitySet="tb_Hanghoa">
+          <ScalarProperty Name="ma_hang" ColumnName="ma_hang" />
+          <ScalarProperty Name="ten_hang" ColumnName="ten_hang" />
+          <ScalarProperty Name="ma_loai" ColumnName="ma_loai" />
+          <ScalarProperty Name="ma_nuoc" ColumnName="ma_nuoc" />
+          <ScalarProperty Name="so_luong" ColumnName="so_luong" />
+          <ScalarProperty Name="don_gia_nhap" ColumnName="don_gia_nhap" />
+          <ScalarProperty Name="don_gia_ban" ColumnName="don_gia_ban" />
+          <ScalarProperty Name="thoi_gian_bh" ColumnName="thoi_gian_bh" />
+          <ScalarProperty Name="ma_chat_lieu" ColumnName="ma_chat_lieu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_HDB">
+      <EntityTypeMapping TypeName="QLBH_FinalModel.tb_HDB">
+        <MappingFragment StoreEntitySet="tb_HDB">
+          <ScalarProperty Name="ma_hdb" ColumnName="ma_hdb" />
+          <ScalarProperty Name="ma_nv" ColumnName="ma_nv" />
+          <ScalarProperty Name="ngay_ban" ColumnName="ngay_ban" />
+          <ScalarProperty Name="ma_kh" ColumnName="ma_kh" />
+          <ScalarProperty Name="thanh_tien" ColumnName="thanh_tien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Khachhang">
+      <EntityTypeMapping TypeName="QLBH_FinalModel.tb_Khachhang">
+        <MappingFragment StoreEntitySet="tb_Khachhang">
+          <ScalarProperty Name="ma_kh" ColumnName="ma_kh" />
+          <ScalarProperty Name="ten_kh" ColumnName="ten_kh" />
+          <ScalarProperty Name="dia_chi" ColumnName="dia_chi" />
+          <ScalarProperty Name="dien_thoai" ColumnName="dien_thoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Loaihang">
+      <EntityTypeMapping TypeName="QLBH_FinalModel.tb_Loaihang">
+        <MappingFragment StoreEntitySet="tb_Loaihang">
+          <ScalarProperty Name="ma_loai" ColumnName="ma_loai" />
+          <ScalarProperty Name="ten_loai" ColumnName="ten_loai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_NCC">
+      <EntityTypeMapping TypeName="QLBH_FinalModel.tb_NCC">
+        <MappingFragment StoreEntitySet="tb_NCC">
+          <ScalarProperty Name="ma_ncc" ColumnName="ma_ncc" />
+          <ScalarProperty Name="ten_ncc" ColumnName="ten_ncc" />
+          <ScalarProperty Name="dia_chi" ColumnName="dia_chi" />
+          <ScalarProperty Name="dien_thoai" ColumnName="dien_thoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Nhanvien">
+      <EntityTypeMapping TypeName="QLBH_FinalModel.tb_Nhanvien">
+        <MappingFragment StoreEntitySet="tb_Nhanvien">
+          <ScalarProperty Name="ma_nv" ColumnName="ma_nv" />
+          <ScalarProperty Name="ten_nv" ColumnName="ten_nv" />
+          <ScalarProperty Name="gioi_tinh" ColumnName="gioi_tinh" />
+          <ScalarProperty Name="ngay_sinh" ColumnName="ngay_sinh" />
+          <ScalarProperty Name="dien_thoai" ColumnName="dien_thoai" />
+          <ScalarProperty Name="dia_chi" ColumnName="dia_chi" />
+          <ScalarProperty Name="ma_ca" ColumnName="ma_ca" />
+          <ScalarProperty Name="ma_cv" ColumnName="ma_cv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Xuatxu">
+      <EntityTypeMapping TypeName="QLBH_FinalModel.tb_Xuatxu">
+        <MappingFragment StoreEntitySet="tb_Xuatxu">
+          <ScalarProperty Name="ma_nuoc" ColumnName="ma_nuoc" />
+          <ScalarProperty Name="ten_nuoc" ColumnName="ten_nuoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

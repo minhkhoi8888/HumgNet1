@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLBH_FinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tb_Calam">
+    <Key>
+      <PropertyRef Name="ma_ca" />
+    </Key>
+    <Property Name="ma_ca" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_ca" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_Congviec">
+    <Key>
+      <PropertyRef Name="ma_cv" />
+    </Key>
+    <Property Name="ma_cv" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_cv" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_CTHDB">
+    <Key>
+      <PropertyRef Name="ma_hdb" />
+      <PropertyRef Name="ma_hang" />
+    </Key>
+    <Property Name="ma_hdb" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ma_hang" Type="int" Nullable="false" />
+    <Property Name="so_luong" Type="float" />
+    <Property Name="don_gia" Type="float" />
+    <Property Name="giam_gia" Type="float" />
+    <Property Name="thanh_tien" Type="float" />
+  </EntityType>
+  <EntityType Name="tb_Chatlieu">
+    <Key>
+      <PropertyRef Name="ma_chat_lieu" />
+    </Key>
+    <Property Name="ma_chat_lieu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_chat_lieu" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_Hanghoa">
+    <Key>
+      <PropertyRef Name="ma_hang" />
+    </Key>
+    <Property Name="ma_hang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_hang" Type="nvarchar" MaxLength="50" />
+    <Property Name="ma_loai" Type="int" />
+    <Property Name="ma_nuoc" Type="int" />
+    <Property Name="so_luong" Type="float" />
+    <Property Name="don_gia_nhap" Type="float" />
+    <Property Name="don_gia_ban" Type="float" />
+    <Property Name="thoi_gian_bh" Type="nvarchar" MaxLength="20" />
+    <Property Name="ma_chat_lieu" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_HDB">
+    <Key>
+      <PropertyRef Name="ma_hdb" />
+    </Key>
+    <Property Name="ma_hdb" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ma_nv" Type="int" />
+    <Property Name="ngay_ban" Type="date" />
+    <Property Name="ma_kh" Type="int" />
+    <Property Name="thanh_tien" Type="float" />
+  </EntityType>
+  <EntityType Name="tb_Khachhang">
+    <Key>
+      <PropertyRef Name="ma_kh" />
+    </Key>
+    <Property Name="ma_kh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_kh" Type="nvarchar" MaxLength="50" />
+    <Property Name="dia_chi" Type="nvarchar" MaxLength="50" />
+    <Property Name="dien_thoai" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_Loaihang">
+    <Key>
+      <PropertyRef Name="ma_loai" />
+    </Key>
+    <Property Name="ma_loai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_loai" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_NCC">
+    <Key>
+      <PropertyRef Name="ma_ncc" />
+    </Key>
+    <Property Name="ma_ncc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_ncc" Type="nvarchar" MaxLength="50" />
+    <Property Name="dia_chi" Type="nvarchar" MaxLength="50" />
+    <Property Name="dien_thoai" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_Nhanvien">
+    <Key>
+      <PropertyRef Name="ma_nv" />
+    </Key>
+    <Property Name="ma_nv" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_nv" Type="nvarchar" MaxLength="50" />
+    <Property Name="gioi_tinh" Type="nvarchar" MaxLength="50" />
+    <Property Name="ngay_sinh" Type="date" />
+    <Property Name="dien_thoai" Type="nvarchar" MaxLength="50" />
+    <Property Name="dia_chi" Type="nvarchar" MaxLength="50" />
+    <Property Name="ma_ca" Type="int" />
+    <Property Name="ma_cv" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'QLBH_Final.dbo.tb_User' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tb_User">
+          <Property Name="Username" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="tb_Xuatxu">
+    <Key>
+      <PropertyRef Name="ma_nuoc" />
+    </Key>
+    <Property Name="ma_nuoc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ten_nuoc" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_tb_CTHDB_tb_Hanghoa">
+    <End Role="tb_Hanghoa" Type="Self.tb_Hanghoa" Multiplicity="1" />
+    <End Role="tb_CTHDB" Type="Self.tb_CTHDB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Hanghoa">
+        <PropertyRef Name="ma_hang" />
+      </Principal>
+      <Dependent Role="tb_CTHDB">
+        <PropertyRef Name="ma_hang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_CTHDB_tb_HDB">
+    <End Role="tb_HDB" Type="Self.tb_HDB" Multiplicity="1" />
+    <End Role="tb_CTHDB" Type="Self.tb_CTHDB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_HDB">
+        <PropertyRef Name="ma_hdb" />
+      </Principal>
+      <Dependent Role="tb_CTHDB">
+        <PropertyRef Name="ma_hdb" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Hanghoa_tb_Chatlieu">
+    <End Role="tb_Chatlieu" Type="Self.tb_Chatlieu" Multiplicity="0..1" />
+    <End Role="tb_Hanghoa" Type="Self.tb_Hanghoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Chatlieu">
+        <PropertyRef Name="ma_chat_lieu" />
+      </Principal>
+      <Dependent Role="tb_Hanghoa">
+        <PropertyRef Name="ma_chat_lieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Hanghoa_tb_Loaihang">
+    <End Role="tb_Loaihang" Type="Self.tb_Loaihang" Multiplicity="0..1" />
+    <End Role="tb_Hanghoa" Type="Self.tb_Hanghoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Loaihang">
+        <PropertyRef Name="ma_loai" />
+      </Principal>
+      <Dependent Role="tb_Hanghoa">
+        <PropertyRef Name="ma_loai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Hanghoa_tb_Xuatxu">
+    <End Role="tb_Xuatxu" Type="Self.tb_Xuatxu" Multiplicity="0..1" />
+    <End Role="tb_Hanghoa" Type="Self.tb_Hanghoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Xuatxu">
+        <PropertyRef Name="ma_nuoc" />
+      </Principal>
+      <Dependent Role="tb_Hanghoa">
+        <PropertyRef Name="ma_nuoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_HDB_tb_Khachhang">
+    <End Role="tb_Khachhang" Type="Self.tb_Khachhang" Multiplicity="0..1" />
+    <End Role="tb_HDB" Type="Self.tb_HDB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Khachhang">
+        <PropertyRef Name="ma_kh" />
+      </Principal>
+      <Dependent Role="tb_HDB">
+        <PropertyRef Name="ma_kh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_HDB_tb_Nhanvien">
+    <End Role="tb_Nhanvien" Type="Self.tb_Nhanvien" Multiplicity="0..1" />
+    <End Role="tb_HDB" Type="Self.tb_HDB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Nhanvien">
+        <PropertyRef Name="ma_nv" />
+      </Principal>
+      <Dependent Role="tb_HDB">
+        <PropertyRef Name="ma_nv" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Nhanvien_tb_Calam">
+    <End Role="tb_Calam" Type="Self.tb_Calam" Multiplicity="0..1" />
+    <End Role="tb_Nhanvien" Type="Self.tb_Nhanvien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Calam">
+        <PropertyRef Name="ma_ca" />
+      </Principal>
+      <Dependent Role="tb_Nhanvien">
+        <PropertyRef Name="ma_ca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Nhanvien_tb_Congviec">
+    <End Role="tb_Congviec" Type="Self.tb_Congviec" Multiplicity="0..1" />
+    <End Role="tb_Nhanvien" Type="Self.tb_Nhanvien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Congviec">
+        <PropertyRef Name="ma_cv" />
+      </Principal>
+      <Dependent Role="tb_Nhanvien">
+        <PropertyRef Name="ma_cv" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLBH_FinalModelStoreContainer">
+    <EntitySet Name="tb_Calam" EntityType="Self.tb_Calam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Congviec" EntityType="Self.tb_Congviec" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_CTHDB" EntityType="Self.tb_CTHDB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Chatlieu" EntityType="Self.tb_Chatlieu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Hanghoa" EntityType="Self.tb_Hanghoa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_HDB" EntityType="Self.tb_HDB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Khachhang" EntityType="Self.tb_Khachhang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Loaihang" EntityType="Self.tb_Loaihang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_NCC" EntityType="Self.tb_NCC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Nhanvien" EntityType="Self.tb_Nhanvien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Xuatxu" EntityType="Self.tb_Xuatxu" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tb_CTHDB_tb_Hanghoa" Association="Self.FK_tb_CTHDB_tb_Hanghoa">
+      <End Role="tb_Hanghoa" EntitySet="tb_Hanghoa" />
+      <End Role="tb_CTHDB" EntitySet="tb_CTHDB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_CTHDB_tb_HDB" Association="Self.FK_tb_CTHDB_tb_HDB">
+      <End Role="tb_HDB" EntitySet="tb_HDB" />
+      <End Role="tb_CTHDB" EntitySet="tb_CTHDB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Hanghoa_tb_Chatlieu" Association="Self.FK_tb_Hanghoa_tb_Chatlieu">
+      <End Role="tb_Chatlieu" EntitySet="tb_Chatlieu" />
+      <End Role="tb_Hanghoa" EntitySet="tb_Hanghoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Hanghoa_tb_Loaihang" Association="Self.FK_tb_Hanghoa_tb_Loaihang">
+      <End Role="tb_Loaihang" EntitySet="tb_Loaihang" />
+      <End Role="tb_Hanghoa" EntitySet="tb_Hanghoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Hanghoa_tb_Xuatxu" Association="Self.FK_tb_Hanghoa_tb_Xuatxu">
+      <End Role="tb_Xuatxu" EntitySet="tb_Xuatxu" />
+      <End Role="tb_Hanghoa" EntitySet="tb_Hanghoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_HDB_tb_Khachhang" Association="Self.FK_tb_HDB_tb_Khachhang">
+      <End Role="tb_Khachhang" EntitySet="tb_Khachhang" />
+      <End Role="tb_HDB" EntitySet="tb_HDB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_HDB_tb_Nhanvien" Association="Self.FK_tb_HDB_tb_Nhanvien">
+      <End Role="tb_Nhanvien" EntitySet="tb_Nhanvien" />
+      <End Role="tb_HDB" EntitySet="tb_HDB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Nhanvien_tb_Calam" Association="Self.FK_tb_Nhanvien_tb_Calam">
+      <End Role="tb_Calam" EntitySet="tb_Calam" />
+      <End Role="tb_Nhanvien" EntitySet="tb_Nhanvien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Nhanvien_tb_Congviec" Association="Self.FK_tb_Nhanvien_tb_Congviec">
+      <End Role="tb_Congviec" EntitySet="tb_Congviec" />
+      <End Role="tb_Nhanvien" EntitySet="tb_Nhanvien" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

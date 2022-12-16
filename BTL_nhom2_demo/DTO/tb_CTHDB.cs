@@ -14,9 +14,10 @@ namespace BTL_nhom2_demo.DTO
     
     public partial class tb_CTHDB
     {
-        public int ma_hdb { get; set; }
+        public string ma_hdb { get; set; }
         public int ma_hang { get; set; }
         public Nullable<double> so_luong { get; set; }
+        public Nullable<double> don_gia { get; set; }
         public Nullable<double> giam_gia { get; set; }
         public Nullable<double> thanh_tien { get; set; }
     

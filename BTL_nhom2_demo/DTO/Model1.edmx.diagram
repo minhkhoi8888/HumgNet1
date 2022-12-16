@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7bdca3f750a840458a31c70f76b8d211" Name="Diagram1" ZoomLevel="101">
+        <EntityTypeShape EntityType="QLBH_FinalModel.tb_Calam" Width="1.5" PointX="5.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_FinalModel.tb_Congviec" Width="1.5" PointX="3.625" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_FinalModel.tb_CTHDB" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_FinalModel.tb_Chatlieu" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_FinalModel.tb_Hanghoa" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_FinalModel.tb_HDB" Width="1.5" PointX="8" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_FinalModel.tb_Khachhang" Width="1.5" PointX="7.875" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_FinalModel.tb_Loaihang" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_FinalModel.tb_NCC" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_FinalModel.tb_Nhanvien" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_FinalModel.tb_Xuatxu" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="QLBH_FinalModel.FK_tb_Nhanvien_tb_Calam" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_FinalModel.FK_tb_Nhanvien_tb_Congviec" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_FinalModel.FK_tb_CTHDB_tb_Hanghoa" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_FinalModel.FK_tb_CTHDB_tb_HDB" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_FinalModel.FK_tb_Hanghoa_tb_Chatlieu" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_FinalModel.FK_tb_Hanghoa_tb_Loaihang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_FinalModel.FK_tb_Hanghoa_tb_Xuatxu" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_FinalModel.FK_tb_HDB_tb_Khachhang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_FinalModel.FK_tb_HDB_tb_Nhanvien" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -18,7 +18,7 @@ namespace BTL_nhom2_demo
             InitializeComponent();
         }
 
-        SqlConnection conn = new SqlConnection(@"server=LAPTOP-AOQAELMH\LIAZZ; database=QLBH_02; integrated security=true");
+        SqlConnection conn = new SqlConnection(@"server=LAPTOP-AOQAELMH\LIAZZ; database=QLBH_Final; integrated security=true");
 
         private string getID(string username, string password)
         {
