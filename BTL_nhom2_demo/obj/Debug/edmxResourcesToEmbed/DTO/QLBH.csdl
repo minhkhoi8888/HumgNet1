@@ -37,6 +37,7 @@
     <Property Name="thanh_tien" Type="Double" />
     <NavigationProperty Name="tb_Hanghoa" Relationship="Self.FK_tb_CTHDB_tb_Hanghoa" FromRole="tb_CTHDB" ToRole="tb_Hanghoa" />
     <NavigationProperty Name="tb_HDB" Relationship="Self.FK_tb_CTHDB_tb_HDB" FromRole="tb_CTHDB" ToRole="tb_HDB" />
+    <Property Name="don_gia" Type="Double" />
   </EntityType>
   <EntityType Name="tb_CTHDN">
     <Key>

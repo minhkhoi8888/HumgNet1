@@ -33,6 +33,7 @@
     <Property Name="so_luong" Type="float" />
     <Property Name="giam_gia" Type="float" />
     <Property Name="thanh_tien" Type="float" />
+    <Property Name="don_gia" Type="float" />
   </EntityType>
   <EntityType Name="tb_CTHDN">
     <Key>

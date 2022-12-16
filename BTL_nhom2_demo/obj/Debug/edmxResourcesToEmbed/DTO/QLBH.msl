@@ -31,6 +31,7 @@
     <EntitySetMapping Name="tb_CTHDB">
       <EntityTypeMapping TypeName="QLBH_02Model.tb_CTHDB">
         <MappingFragment StoreEntitySet="tb_CTHDB">
+          <ScalarProperty Name="don_gia" ColumnName="don_gia" />
           <ScalarProperty Name="ma_hdb" ColumnName="ma_hdb" />
           <ScalarProperty Name="ma_hang" ColumnName="ma_hang" />
           <ScalarProperty Name="so_luong" ColumnName="so_luong" />

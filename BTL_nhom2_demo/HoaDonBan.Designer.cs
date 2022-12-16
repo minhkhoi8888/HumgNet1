@@ -83,6 +83,7 @@
             this.btnExit.TabIndex = 20;
             this.btnExit.Text = "Đóng";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnDelete
             // 
@@ -93,6 +94,7 @@
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "Xóa hóa đơn";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -103,6 +105,7 @@
             this.btnSave.TabIndex = 18;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnAdd
             // 

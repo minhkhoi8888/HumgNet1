@@ -38,6 +38,7 @@
           <Property Name="so_luong" Type="float" />
           <Property Name="giam_gia" Type="float" />
           <Property Name="thanh_tien" Type="float" />
+          <Property Name="don_gia" Type="float" />
         </EntityType>
         <EntityType Name="tb_CTHDN">
           <Key>
@@ -382,6 +383,7 @@ warning 6013: The table/view 'QLBH_02.dbo.tb_User' does not have a primary key d
           <Property Name="thanh_tien" Type="Double" />
           <NavigationProperty Name="tb_Hanghoa" Relationship="Self.FK_tb_CTHDB_tb_Hanghoa" FromRole="tb_CTHDB" ToRole="tb_Hanghoa" />
           <NavigationProperty Name="tb_HDB" Relationship="Self.FK_tb_CTHDB_tb_HDB" FromRole="tb_CTHDB" ToRole="tb_HDB" />
+          <Property Name="don_gia" Type="Double" />
         </EntityType>
         <EntityType Name="tb_CTHDN">
           <Key>
@@ -735,6 +737,7 @@ warning 6013: The table/view 'QLBH_02.dbo.tb_User' does not have a primary key d
           <EntitySetMapping Name="tb_CTHDB">
             <EntityTypeMapping TypeName="QLBH_02Model.tb_CTHDB">
               <MappingFragment StoreEntitySet="tb_CTHDB">
+                <ScalarProperty Name="don_gia" ColumnName="don_gia" />
                 <ScalarProperty Name="ma_hdb" ColumnName="ma_hdb" />
                 <ScalarProperty Name="ma_hang" ColumnName="ma_hang" />
                 <ScalarProperty Name="so_luong" ColumnName="so_luong" />
