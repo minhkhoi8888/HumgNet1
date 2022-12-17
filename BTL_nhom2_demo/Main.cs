@@ -16,5 +16,11 @@ namespace BTL_nhom2_demo
         {
             InitializeComponent();
         }
+
+        private void nhaCungCapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyNCC NCC  = new QuanLyNCC();
+            NCC.Show();
+        }
     }
 }

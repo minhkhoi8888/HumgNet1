@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// using entites
+using BTL_nhom2_demo.DTO;
+
 namespace BTL_nhom2_demo
 {
     public partial class DangNhap : Form
@@ -18,41 +21,26 @@ namespace BTL_nhom2_demo
             InitializeComponent();
         }
 
-        SqlConnection conn = new SqlConnection(@"server=LAPTOP-AOQAELMH\LIAZZ; database=QLBH_02; integrated security=true");
+        // entity
+        QLBH_02Entities1 db = new QLBH_02Entities1();
 
-        private string getID(string username, string password)
+
+        public Boolean getID(string nameU, string pass)
         {
-            string id = "";
-            try
+            var select = from s in db.tb_User select s;
+            foreach (var data in select)
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM tb_User where Username = '" + username + "' and Password = '" + password + "'", conn);
-                SqlDataAdapter myAdapter = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                myAdapter.Fill(dt);
-                if(dt != null)
+                if (data.usename == nameU)
                 {
-                    foreach(DataRow dr in dt.Rows)
-                    {
-                        id = dr["Username"].ToString();
-                    }
+                    return false;
                 }
-            }catch
-            {
-                MessageBox.Show("Error qerry or connect database fail...", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-            }finally
-            {
-                conn.Close();
             }
-
-            return id;
+            return true;
         }
 
-        public static string ID_User = "";
-        private void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e)
         {
-            ID_User = getID(textBox1.Text, textBox2.Text);
-            if(ID_User != "")
+            if (getID(textBox1.Text, textBox2.Text) == true)
             {
                 Main home = new Main();
                 home.ShowDialog();
@@ -89,5 +77,9 @@ namespace BTL_nhom2_demo
 
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

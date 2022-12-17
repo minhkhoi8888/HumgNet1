@@ -4,32 +4,33 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="225c26603a0042cab5f3024ab63eb380" Name="Diagram1">
-        <EntityTypeShape EntityType="QLBH_01Model.sysdiagram" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBH_01Model.tb_Calam" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBH_01Model.tb_Congviec" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBH_01Model.tb_CTHDB" Width="1.5" PointX="10.5" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBH_01Model.tb_CTHDN" Width="1.5" PointX="13.5" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBH_01Model.tb_Donvitinh" Width="1.5" PointX="6" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBH_01Model.tb_Hanghoa" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBH_01Model.tb_HDB" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBH_01Model.tb_HDN" Width="1.5" PointX="8.25" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBH_01Model.tb_Khachhang" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBH_01Model.tb_Loaihang" Width="1.5" PointX="6" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBH_01Model.tb_NCC" Width="1.5" PointX="6" PointY="12.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBH_01Model.tb_Nhanvien" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <AssociationConnector Association="QLBH_01Model.FK_tb_Nhanvien_tb_Calam" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBH_01Model.FK_tb_Nhanvien_tb_Congviec" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBH_01Model.FK_tb_CTHDB_tb_Hanghoa" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBH_01Model.FK_tb_CTHDB_tb_HDB" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBH_01Model.FK_tb_CTHDN_tb_Hanghoa" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBH_01Model.FK_tb_CTHDN_tb_HDN" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBH_01Model.FK_tb_Hanghoa_tb_Donvitinh" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBH_01Model.FK_tb_Hanghoa_tb_Loaihang" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBH_01Model.FK_tb_HDB_tb_Khachhang" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBH_01Model.FK_tb_HDB_tb_Nhanvien" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBH_01Model.FK_tb_HDN_tb_NCC" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBH_01Model.FK_tb_HDN_tb_Nhanvien" ManuallyRouted="false" />
+      <Diagram DiagramId="7cf06713eb174442b3e56638de2bc6a2" Name="Diagram1">
+        <EntityTypeShape EntityType="QLBH_02Model.sysdiagram" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_02Model.tb_Calam" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_02Model.tb_Congviec" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_02Model.tb_CTHDB" Width="1.5" PointX="10.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_02Model.tb_CTHDN" Width="1.5" PointX="13.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_02Model.tb_Hanghoa" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_02Model.tb_HDB" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_02Model.tb_HDN" Width="1.5" PointX="8.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_02Model.tb_Khachhang" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_02Model.tb_Loaihang" Width="1.5" PointX="6" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_02Model.tb_NCC" Width="1.5" PointX="6" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_02Model.tb_Nhanvien" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_02Model.tb_User" Width="1.5" PointX="2.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBH_02Model.tb_Xuatxu" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
+        <AssociationConnector Association="QLBH_02Model.FK_tb_Nhanvien_tb_Calam" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_02Model.FK_tb_Nhanvien_tb_Congviec" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_02Model.FK_tb_CTHDB_tb_Hanghoa" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_02Model.FK_tb_CTHDB_tb_HDB" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_02Model.FK_tb_CTHDN_tb_Hanghoa" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_02Model.FK_tb_CTHDN_tb_HDN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_02Model.FK_tb_Hanghoa_tb_Loaihang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_02Model.FK_tb_Hanghoa_tb_Xuatxu" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_02Model.FK_tb_HDB_tb_Khachhang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_02Model.FK_tb_HDB_tb_Nhanvien" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_02Model.FK_tb_HDN_tb_NCC" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBH_02Model.FK_tb_HDN_tb_Nhanvien" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

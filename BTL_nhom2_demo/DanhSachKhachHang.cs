@@ -17,7 +17,7 @@ namespace BTL_nhom2_demo
 {
     public partial class DanhSachKhachHang : Form
     {
-        QLBH_01Entities db = new QLBH_01Entities();
+        QLBH_02Entities1 db = new QLBH_02Entities1();
 
         public DanhSachKhachHang()
         {
@@ -147,6 +147,11 @@ namespace BTL_nhom2_demo
             {
                 Close();
             }
+        }
+
+        private void DanhSachKhachHang_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
